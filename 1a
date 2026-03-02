@@ -1,0 +1,32 @@
+#Kilometer to miles conv. factor: 1 km = 0.62 miles
+#Liters to gallons conv. factor: 1 gal = 3.78 liters
+
+def convert_fuel(*kpl_values):
+    factor = 2.3436
+    results = []
+    for k in kpl_values:
+        mpg = factor * k
+        results.append(f"{k} kpl is {mpg:.2f} mpg")
+
+    return results
+
+def main():
+    print("KPL to MPG convertor")
+    user_input = input("Enter KPL values(separated by space): ")
+
+    try:
+        values = [float(x) for x in user_input.split()]
+        if not values:
+            print("Invalid input")
+            return
+
+        output = convert_fuel(*values)
+        print("Result:", output)
+
+    except ValueError:
+        print("Invalid input: Try again")
+        main()
+
+if __name__ == "__main__":
+    main()
+
