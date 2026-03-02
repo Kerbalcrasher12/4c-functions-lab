@@ -1,0 +1,12 @@
+1.
+
+def my_func(a,b,*args):
+  print(args)
+
+my_func(1,2,3,4,5,6)
+
+#This code works because it turns the values 3 and onwards into a tuple, allowing Python to print them without thinking its 4 different arguments
+
+2.
+
+#X is printed as 10 because while it was initially set to 100, it was later set to 10 globally again, which changed it's value and thus led to 10 being printed once it was called
