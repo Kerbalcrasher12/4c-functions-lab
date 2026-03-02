@@ -1,0 +1,5 @@
+1. If you put a list or dictionary inside of a function and modify it, those modifications would appear outside of the function as well
+
+2. Any operation that could modify the list or dictionary, such as append or extend, could be seen outside the function
+
+3. The best way to modify a list or dictionary without modifying the actual key would be to make a copy of it
